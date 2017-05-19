@@ -1,0 +1,16 @@
+<h1>VIVIENNE GOLD</h1>
+
+  <div class="row">
+    <% @pieces.each do |piece| %>
+      <div class="col-md-4">
+        <div class="thumbnail well">
+
+        <h1><a href="/pieces/<%= piece.id %>"> <%= piece.title %></a></h1>
+       
+        <h4><%= piece.materials %></h4>
+        <img src="<%= piece.image %>">
+        <h3><%= piece.date %></h3>
+      </div>
+    </div>
+  <% end %>
+</div>

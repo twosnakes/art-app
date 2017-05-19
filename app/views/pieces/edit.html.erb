@@ -1,0 +1,24 @@
+<h1>Edit Piece</h1>
+
+<%= form_tag "/piece/#{@piece.id}", method: :patch do %>
+<div>
+Title: <input type="text" name= "title" value="<%= @piece.title %>">
+ </div>
+<div>
+Materials: <input type="text" name= "title" value="<% @piece.materials %>">
+ </div>
+<div>
+Date: <input type="text" name= "title" value="<% @piece.date %>">
+ </div>
+<div>
+Height: <input type="text" name= "title" value="<% @piece.height %>">
+</div>
+<div>
+Width: <input type="text" name= "title" value="<% @piece.width %>">
+</div>
+<div>
+Image: <input type="text" name= "title" value="<% @piece.image %>">
+ </div>
+<input type="submit" value="update">
+  <% end %>
+  

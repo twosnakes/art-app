@@ -1,7 +1,7 @@
 class PiecesController < ApplicationController
   
   def index
-    @pieces = Pieces.all
+    @pieces = Piece.all
   end
   
   def new
@@ -13,8 +13,9 @@ class PiecesController < ApplicationController
       title: params[:title],
       materials: params[:materials],
       date: params[:date],
-      height: params[:height]
-      width: params[:width]
+      height: params[:height],
+      width: params[:width],
+      image: params[:image]
       )
     piece.save
      flash[:success] = "Piece Successfully Created"
@@ -28,7 +29,7 @@ class PiecesController < ApplicationController
   end 
 
   def edit 
-    @piece = Piece.find(params[id:])
+    @piece = Piece.find(params[:id])
   end
 
   def update
@@ -37,8 +38,9 @@ class PiecesController < ApplicationController
       title: params[:title],
       materials: params[:materials],
       date: params[:date],
-      height: params[:height]
-      width: params[:width]
+      height: params[:height],
+      width: params[:width],
+      image: params[:image]
       )
     piece.save
     flash[:success] = "Piece Successfully Updated"

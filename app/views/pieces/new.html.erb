@@ -1,0 +1,23 @@
+<h1>New Product</h1>
+
+<%= form_tag "/pieces", method: :post do %>
+<div>
+  Title: <input type="text" name= "title">
+ </div>
+<div>
+  Materials: <input type="text" name= "materials">
+ </div>
+<div>
+  Date: <input type="text" name= "date">
+ </div>
+<div>
+  Height: <input type="text" name= "height">
+</div>
+<div>
+  Width: <input type="text" name= "width">
+</div>
+<div>
+  Image: <input type="text" name= "image_url">
+</div>
+<<input type="submit" value="create image">
+  <% end %>
